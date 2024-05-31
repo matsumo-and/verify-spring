@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Constraint(validatedBy = MultiPartFileNotNullValidator.class)
-public @interface MultipartFileSize {
+public @interface MultiPartFileNotNull {
   // error message
   public String message() default "Invalid color: must be RED, GREEN or BLUE";
 

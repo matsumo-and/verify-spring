@@ -1,9 +1,10 @@
 package com.spring.verify.app.presentation.api.v1.controller;
 
-import com.spring.verify.app.domain.anotation.MultiPartFile;
+import com.spring.verify.app.domain.anotation.MultiPartFileNotNull;
 import com.spring.verify.app.domain.anotation.MultipartFileSize;
 import com.spring.verify.app.domain.model.User;
 import com.spring.verify.app.presentation.api.v1.request.UserCreateRequest;
+import com.spring.verify.app.presentation.api.v1.request.UserPostRequest;
 import com.spring.verify.app.presentation.api.v1.response.UserResponse;
 import com.spring.verify.app.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -59,8 +60,8 @@ public class UserController {
   public void uploadPicture(
       @Schema(title = "file", description = "file data")
           @Parameter(name = "file", description = "file data")
-          @MultiPartFile
+          @MultiPartFileNotNull
           @MultipartFileSize
           MultipartFile file,
-      @Valid UserCreateRequest request) {}
+      @Valid UserPostRequest request) {}
 }
