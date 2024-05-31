@@ -64,4 +64,19 @@ public class UserController {
           @MultipartFileSize
           MultipartFile file,
       @Valid UserPostRequest request) {}
+
+  @PostMapping("/file")
+  @Operation(description = "upload a picture.")
+  @ApiResponses({
+    @ApiResponse(responseCode = "200", description = "OK"),
+    @ApiResponse(responseCode = "400", description = "Invalid request body."),
+    @ApiResponse(responseCode = "500", description = "unable to upload picture.")
+  })
+  public void uploadFile(
+      @Schema(title = "file", description = "file data")
+          @Parameter(name = "file", description = "file data")
+          @MultiPartFileNotNull
+          @MultipartFileSize
+          MultipartFile file,
+      @Valid UserPostRequest request) {}
 }
