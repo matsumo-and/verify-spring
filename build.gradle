@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
   compileOnly 'org.projectlombok:lombok'
   developmentOnly 'org.springframework.boot:spring-boot-devtools'
   annotationProcessor 'org.projectlombok:lombok'
@@ -34,7 +34,6 @@ dependencies {
 spotless {
 
   java {
-    //eclipse().configFile project.file("eclipse-format-setting.xml")
     googleJavaFormat()
     trimTrailingWhitespace()
     endWithNewline()
