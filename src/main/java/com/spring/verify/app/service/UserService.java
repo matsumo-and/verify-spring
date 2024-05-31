@@ -1,7 +1,7 @@
 package com.spring.verify.app.service;
 
-import com.spring.verify.app.model.User;
-import com.spring.verify.app.repository.UserRepository;
+import com.spring.verify.app.domain.model.User;
+import com.spring.verify.app.domain.repository.UserRepository;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

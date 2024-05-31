@@ -1,7 +1,7 @@
-package com.spring.verify.app.controller;
+package com.spring.verify.app.presentation.api.v1.controller;
 
-import com.spring.verify.app.controller.response.UserResponse;
-import com.spring.verify.app.model.User;
+import com.spring.verify.app.presentation.api.v1.response.UserResponse;
+import com.spring.verify.app.domain.model.User;
 import com.spring.verify.app.service.UserService;
 import java.util.List;
 import lombok.AllArgsConstructor;

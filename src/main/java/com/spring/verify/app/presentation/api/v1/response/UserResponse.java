@@ -1,4 +1,4 @@
-package com.spring.verify.app.controller.response;
+package com.spring.verify.app.presentation.api.v1.response;
 
 import java.util.List;
 

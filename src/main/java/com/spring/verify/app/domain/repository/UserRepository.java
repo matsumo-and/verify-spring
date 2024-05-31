@@ -1,8 +1,8 @@
-package com.spring.verify.app.repository;
+package com.spring.verify.app.domain.repository;
 
 import com.spring.verify.app.infrastructure.dao.UserDao;
 import com.spring.verify.app.infrastructure.entity.UserEntity;
-import com.spring.verify.app.model.User;
+import com.spring.verify.app.domain.model.User;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
