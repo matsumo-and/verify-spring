@@ -1,0 +1,11 @@
+package com.spring.verify.app.service;
+
+import com.spring.verify.app.repository.UserRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@AllArgsConstructor
+public class UserService {
+  private final UserRepository userRepository;
+}
