@@ -1,19 +1,17 @@
 package com.spring.verify.app.infrastructure.dao;
 
-import com.spring.verify.app.infrastructure.entity.UserEntity;
+import com.spring.verify.app.infrastructure.entity.PersonalInformationEntity;
 import java.util.List;
-import org.springframework.stereotype.Component;
+import org.seasar.doma.*;
+import org.seasar.doma.boot.ConfigAutowireable;
 
-@Component
-public class UserDao {
+@Dao
+@ConfigAutowireable
+public interface UserDao {
 
-  public List<UserEntity> findUsers() {
-
-    List<UserEntity> entityList =
-        List.of(
-            new UserEntity(1, "John Doe", "john_doe@google.com", "https://cat.com/"),
-            new UserEntity(2, "Michael Era", "eraaaa@icloud.com", "https://dog.com/"));
-
-    return entityList;
-  }
+  @Select
+  @Sql("""
+          select * from personal_information
+          """)
+  List<PersonalInformationEntity> findUsers();
 }
